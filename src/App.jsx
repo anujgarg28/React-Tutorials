@@ -23,6 +23,12 @@ export default class App extends React.Component {
            name: 'Anuj'
         });
     }
+    
+    changeName = (updatedName) => {
+        this.setState({
+            name: updatedName
+        })
+    }
 
     render() {
         return (
@@ -35,6 +41,7 @@ export default class App extends React.Component {
                     name={this.state.name} 
                     city = {'Gurgaon'}
                     phone = {2832832032}
+                    change = {this.changeName}
                />}
             </React.Fragment>
         )
